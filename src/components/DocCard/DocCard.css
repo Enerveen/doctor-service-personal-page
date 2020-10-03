@@ -1,0 +1,59 @@
+.container {
+  width: 475px;
+  border-radius: 5px;
+  margin: 15px 20px 35px 0;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px #ebe7ff;
+}
+
+.upperPart {
+  max-width: 60%;
+  margin-bottom: 10px;
+}
+
+.upperPart > span {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.upperPart > p {
+  font-weight: 300;
+}
+
+.bottomPart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bottomPart > button {
+  color: #fff;
+  font-weight: 500;
+  background: #7761ff;
+  display: block;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 98px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.doc {
+  display: flex;
+}
+
+.doc p {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.doc span {
+  color: #ebe7ff;
+}
+
+.doc > div {
+  margin-left: 5px;
+  margin-top: 18px;
+}

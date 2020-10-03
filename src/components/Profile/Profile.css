@@ -1,0 +1,14 @@
+.container {
+  padding: 15px 0 0 20px;
+  height: 100vh;
+  background-color: #fcfcfc;
+}
+
+.docCards {
+  display: flex;
+  align-items: center;
+}
+
+.docCards a {
+  color: #50caff;
+}

@@ -10,6 +10,7 @@
 
 .container button {
   color: #fff;
+  font-weight: 500;
   background: #7761ff;
   display: block;
   border: none;
