@@ -1,0 +1,38 @@
+.container {
+  padding: 15px 0 0 18px;
+  height: calc(100vh - 55px);
+  background-color: #fcfcfc;
+}
+
+.container > main {
+  display: flex;
+}
+
+.headingCont span {
+  font-size: 16px;
+  margin-left: 14px;
+}
+
+.appointments {
+  width: 505px;
+  height: 640px;
+  overflow-y: scroll;
+}
+
+.appointments::-webkit-scrollbar {
+  width: 8px;
+}
+
+.appointments::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: #ebe7ff;
+}
+
+.appointments::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #003b72;
+}
+
+.calendarCont {
+  padding: 48px 40px 0 40px;
+}

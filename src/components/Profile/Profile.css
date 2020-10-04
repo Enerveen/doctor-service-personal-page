@@ -1,14 +1,19 @@
 .container {
   padding: 15px 0 0 20px;
-  height: 100vh;
+  height: calc(100vh - 55px);
   background-color: #fcfcfc;
 }
 
-.docCards {
+.docCardsCont {
   display: flex;
   align-items: center;
 }
 
-.docCards a {
+.docCardsCont a {
   color: #50caff;
+}
+
+.infoCardsCont {
+  display: flex;
+  flex-wrap: wrap;
 }

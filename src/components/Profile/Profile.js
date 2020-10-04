@@ -1,14 +1,23 @@
 import React from 'react';
+//Для реализации нескольких страниц в SPA на React, очевидно, лучше всего подходит react-router-dom
 import { NavLink } from 'react-router-dom';
+//Здесь и далее я использую react-inlinesvg чтобы не портить вид кода вставкой кода SVG непосредственно в элементы
+import SVG from 'react-inlinesvg';
 
 import DocCard from '../DocCard/DocCard';
+import InfoCard from './InfoCard/InfoCard';
 
 import styles from './Profile.css';
 
 import malushko from '../../images/Malushko.png';
 import kharkov from '../../images/Kharkov.png';
 
-//Иммитация данных, полученных с сервера, предполагается, что запросом с этой страницы мы получаем 2 сущности.
+const InfoIco = () => <SVG src={require('../../icons/info.svg')} />;
+const ResIco = () => <SVG src={require('../../icons/results.svg')} />;
+const AddIco = () => <SVG src={require('../../icons/add.svg')} />;
+const HistoryIco = () => <SVG src={require('../../icons/history.svg')} />;
+
+//Имитация данных, полученных с сервера, предполагается, что запросом с этой страницы мы получаем 2 сущности.
 
 const data = [
   {
@@ -32,18 +41,63 @@ const data = [
 const Profile = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.appointments}>
+      <section>
         <p>Записи на приём</p>
-        <div className={styles.docCards}>
+        <div className={styles.docCardsCont}>
           {data.map((item, index) => (
-            <DocCard key={index} docInfo={item} />
+            <DocCard key={index} doc={item} />
           ))}
-          <div class={styles.showMore}>
+          <div className={styles.showMore}>
             <p>Еще 3 записи</p>
             <NavLink to='/appointments'>Подробнее</NavLink>
           </div>
         </div>
-      </div>
+      </section>
+      <section>
+        <p>Электронная карта</p>
+        <div className={styles.infoCardsCont}>
+          <InfoCard
+            props={{
+              header: 'Информация о пациенте',
+              content: (
+                <ul>
+                  <li>
+                    <span>Ваши личные данные</span>
+                  </li>
+                  <li>
+                    <span>Рекомендации врачей</span>
+                  </li>
+                  <li>
+                    <span>История болезни</span>
+                  </li>
+                </ul>
+              ),
+              icon: InfoIco,
+            }}
+          />
+          <InfoCard
+            props={{
+              header: 'Результаты анализов',
+              content: <p>Вы можете узнать здесь результаты своих анализов</p>,
+              icon: ResIco,
+            }}
+          />
+          <InfoCard
+            props={{
+              header: 'Добавить информацию',
+              content: <p>Добавляйте в свою электронную медицинскую карту новые данные</p>,
+              icon: AddIco,
+            }}
+          />
+          <InfoCard
+            props={{
+              header: 'История приемов',
+              content: <p>Вся информация о полученных услугах за все время хранится здесь</p>,
+              icon: HistoryIco,
+            }}
+          />
+        </div>
+      </section>
     </div>
   );
 };

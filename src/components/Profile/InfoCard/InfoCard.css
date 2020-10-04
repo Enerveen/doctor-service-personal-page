@@ -1,0 +1,67 @@
+.container {
+  min-height: 195px;
+  display: flex;
+  width: 540px;
+  border-radius: 5px;
+  margin: 8px;
+  background: #fff;
+  box-shadow: 0 0 10px #ebe7ff;
+}
+
+.container.active {
+  border: 3px solid #50caff;
+}
+
+.icoCont {
+  /*Подобного рода странные манипуляции нужны потому как без них между
+  границей карты и заливкой блока возникает "щель" родительского элемента*/
+  margin-left: -1px;
+  margin-top: -1px;
+  height: 102%;
+
+  width: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icoCont.active {
+  background: #50caff;
+}
+
+.icoCont > svg {
+  width: 50px;
+  height: 50px;
+}
+
+.main {
+  margin: 0 0 20px 36px;
+  padding: 20px 36px 20px 0;
+}
+
+.main > h2 {
+  display: block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #ebe7ff;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h2.active {
+  border-bottom: 2px solid #50caff;
+}
+
+.main li {
+  color: #50caff;
+  font-size: 16px;
+}
+
+.main li > span {
+  font-size: 16px;
+  color: #000;
+}
+
+.main p {
+  line-height: 24px;
+  font-size: 16px;
+}

@@ -1,9 +1,10 @@
+//Компонент иерархически находится на одном уровне с компонентами Profile и Appointments т.к используется в обоих
+
 import React from 'react';
 
 import styles from './DocCard.css';
 
-const DocCard = (data) => {
-  const doc = data.docInfo;
+const DocCard = ({ doc }) => {
   return (
     <div className={styles.container}>
       <div className={styles.upperPart}>

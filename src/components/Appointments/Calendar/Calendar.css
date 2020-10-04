@@ -1,0 +1,66 @@
+.container {
+  background: #ebe7ff;
+  border-radius: 5px;
+  width: 573px;
+}
+
+.head {
+  color: #fff;
+  background: #7761ff;
+  border-radius: 5px 5px 0 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.head > svg {
+  cursor: pointer;
+  height: 14px;
+}
+
+.head > span {
+  margin: 0 35px;
+}
+
+.days {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.body {
+  padding: 10px 10px 72px 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elem {
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  width: 79px;
+  height: 63px;
+  font-size: 20px;
+  padding: 11px 14px;
+}
+
+.elem:hover {
+  background: #f6f4ff;
+}
+
+.elemInactive {
+  color: grey;
+  background: #ebe7ff;
+  width: 79px;
+  height: 63px;
+  font-size: 20px;
+  padding: 11px 14px;
+}
+
+.notification {
+  position: absolute;
+  right: 14px;
+  top: 37px;
+  padding: 4px 7px;
+  border-radius: 100%;
+  background: #50caff;
+}
